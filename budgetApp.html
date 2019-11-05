@@ -11,6 +11,76 @@
     </head>
     <body>
         <h1>Budget App</h1>
+        <div id="BudgetApp">
+            <div id="budget">
+                <div id="enterBudget">
+                    <div id="budgetAmount">
+                        <label for="amount">Budget Amount</label>
+                        <br>
+                        <input type="number" name="" id="amount">
+                    </div><!--budget Amount-->
+                    <button>Calculate</button>
+                </div><!--Enter Budget-->
+
+                <div id="budgetReport">
+                    <div id="firstReport">
+                        <h2>Budget</h2>
+                        <p><span>Icon</span></p>
+                        <p>#0</p>
+                    </div><!--First Report-->
+                    <div id="secondReport">
+                        <h2>Expenses</h2>
+                        <p><span>Icon</span></p>
+                        <p>#0</p>
+                    </div><!--second Report-->
+                    <div id="thirdReport">
+                        <h2>Balance</h2>
+                        <p><span>Icon</span></p>
+                        <p>#0</p>
+                    </div><!--third Report-->
+                </div><!--Budget Report-->
+            </div><!--Budget-->
+
+            <div id="expenses">
+                <div id="enterExpense">
+                    <div id="expenseName">
+                        <label for="name">Expense Name</label>
+                        <br>
+                        <input type="text" name="" id="name">
+                    </div><!--expense Name-->
+
+                    <div id="expenseAmount">
+                        <label for="amount">Expense Amount</label>
+                        <br>
+                        <input type="text" name="" id="amount">
+                    </div><!--expense Amount-->
+                    <button>Add Expense</button>
+                </div><!--Enter Expense-->
+
+                <table id="expenseReport">
+                    <thead>
+                        <tr>
+                            <th>Expense Title</th>
+                            <th>Expense Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>New Laptop</td>
+                            <td>50000</td>
+                            <td>Edit</td>
+                            <td>Delete</td>
+                        </tr>
+                        <tr>
+                            <td>Rent</td>
+                            <td>75000</td>
+                            <td>Edit</td>
+                            <td>Delete</td>
+                        </tr>
+                    </tbody>
+                </table><!--Expense Report-->
+            </div><!--expenses-->
+        </div><!--Budget App Container-->
     </body>
     <script src="Assets/js/budgetApp.js"></script>
 </html>
