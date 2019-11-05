@@ -1,0 +1,27 @@
+/* General Styles */
+body{
+    background-color: rgb(248, 223, 227);
+}
+h1{
+    text-align: center;
+}
+#BudgetApp{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 100px;
+}
+.budgetAppSections{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+#budget #budgetReport{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+table th{
+    text-align: left;
+}
