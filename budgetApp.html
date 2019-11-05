@@ -15,28 +15,27 @@
             <div id="budget" class="budgetAppSections">
                 <div id="enterBudget">
                     <div id="budgetAmount">
-                        <label for="amount">Budget Amount</label>
+                        <label for="amount">Enter Budget Amount</label>
                         <br>
                         <input type="number" name="" id="amount">
                     </div><!--budget Amount-->
-                    <button>Calculate</button>
                 </div><!--Enter Budget-->
 
                 <div id="budgetReport">
                     <div id="firstReport">
                         <h2>Budget</h2>
                         <p><span>Icon</span></p>
-                        <p>#0</p>
+                        <p>#<span id="figure1" class="figure"></span></p>
                     </div><!--First Report-->
                     <div id="secondReport">
                         <h2>Expenses</h2>
                         <p><span>Icon</span></p>
-                        <p>#0</p>
+                        <p># <span class="figure">0</span></p>
                     </div><!--second Report-->
                     <div id="thirdReport">
                         <h2>Balance</h2>
                         <p><span>Icon</span></p>
-                        <p>#0</p>
+                        <p># <span class="figure" id="figure3">0</span></p>
                     </div><!--third Report-->
                 </div><!--Budget Report-->
             </div><!--Budget-->
@@ -52,7 +51,7 @@
                     <div id="expenseAmount">
                         <label for="amount">Expense Amount</label>
                         <br>
-                        <input type="text" name="" id="amount">
+                        <input type="number" name="" id="amount">
                     </div><!--expense Amount-->
                     <button>Add Expense</button>
                 </div><!--Enter Expense-->
@@ -80,6 +79,10 @@
                     </tbody>
                 </table><!--Expense Report-->
             </div><!--expenses-->
+
+            <div id="calcBalance">
+                <button>Calculate Balance</button>
+            </div>
         </div><!--Budget App Container-->
     </body>
     <script src="Assets/js/budgetApp.js"></script>
