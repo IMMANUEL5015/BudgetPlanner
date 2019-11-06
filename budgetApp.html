@@ -8,40 +8,44 @@
         <link rel="stylesheet" href="Assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="Assets/css/budgetApp.css">
         <script src="Assets/js/lib/jquery-3.4.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Budget App</h1>
+        <h1>The Budget App</h1>
         <div id="BudgetApp">
             <div id="budget" class="budgetAppSections">
-                <div id="enterBudget">
+                <div id="enterBudget" class="Details">
                     <div id="budgetAmount">
                         <label for="amount">Enter Budget Amount</label>
                         <br>
                         <input type="number" name="" id="amount">
                     </div><!--budget Amount-->
+                    <div id="calcBalance">
+                        <button>Calculate Balance</button>
+                    </div>
                 </div><!--Enter Budget-->
 
-                <div id="budgetReport">
+                <div id="budgetReport" class="Details">
                     <div id="firstReport">
                         <h2>Budget</h2>
-                        <p><span>Icon</span></p>
-                        <p>#<span id="figure1" class="figure"></span></p>
+                        <p><span><i class="fa fa-money" aria-hidden="true"></i></span></p>
+                        <p class="money">&#x20a6;<span id="figure1" class="figure"></span></p>
                     </div><!--First Report-->
                     <div id="secondReport">
                         <h2>Expenses</h2>
-                        <p><span>Icon</span></p>
-                        <p># <span class="figure" id="figure2">0</span></p>
+                        <p><span><i class="fa fa-credit-card-alt" aria-hidden="true"></i></span></p>
+                        <p class="money">&#x20a6;<span class="figure" id="figure2"></span></p>
                     </div><!--second Report-->
                     <div id="thirdReport">
                         <h2>Balance</h2>
-                        <p><span>Icon</span></p>
-                        <p># <span class="figure" id="figure3">0</span></p>
+                        <p><span><i class="fa fa-cc-mastercard" aria-hidden="true"></i></span></p>
+                        <p class="money">&#x20a6;<span class="figure" id="figure3"></span></p>
                     </div><!--third Report-->
                 </div><!--Budget Report-->
             </div><!--Budget-->
 
             <div id="expense" class="budgetAppSections">
-                <div id="enterExpense">
+                <div id="enterExpense" class="Details">
                     <div id="expenseName">
                         <label for="name">Expense Name</label>
                         <br>
@@ -56,7 +60,7 @@
                     <button>Add Expense</button>
                 </div><!--Enter Expense-->
 
-                <table id="expenseReport">
+                <table id="expenseReport" class="Details">
                     <thead>
                         <tr>
                             <th>Expense Title</th>
@@ -67,22 +71,18 @@
                         <tr>
                             <td>New Laptop</td>
                             <td>50000</td>
-                            <td class="edit">Edit</td>
-                            <td class="delete">Delete</td>
+                            <td class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                            <td class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></td>
                         </tr>
                         <tr>
                             <td>Rent</td>
                             <td>75000</td>
-                            <td class="edit">Edit</td>
-                            <td class="delete">Delete</td>
+                            <td class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                            <td class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></td>
                         </tr>
                     </tbody>
                 </table><!--Expense Report-->
             </div><!--expenses-->
-
-            <div id="calcBalance">
-                <button>Calculate Balance</button>
-            </div>
         </div><!--Budget App Container-->
     </body>
     <script src="Assets/js/budgetApp.js"></script>
