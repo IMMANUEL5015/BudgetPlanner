@@ -20,13 +20,12 @@ $('#expense button').click(function(e){
     var expenseAmount = $('#expense input[type="number"]').val();
     if(expenseName !== '' && expenseAmount != 0){
         expenses.push({title: expenseName, amount: parseInt(expenseAmount)});
-        var newRow = "<tr>" + "<td>" + expenseName + "</td>" + "<td>" + expenseAmount + "</td>" + "<td>" + "Edit" + "</td>" + "<td>" + "Delete" + "</td>" + "</tr>";
+        var newRow = "<tr>" + "<td>" + expenseName + "</td>" + "<td>" + expenseAmount + "</td>" + "<td class='edit'>" + "Edit" + "</td>" + "<td class='delete'>" + "Delete" + "</td>" + "</tr>";
         $('table tbody').append(newRow);
         $('#expense input[type="text"]').val('');  
         $('#expense input[type="number"]').val('');
     }
     calcExpenses();
-    $('#secondReport #figure2').text(expensesSum);
     e.stopPropagation();
 });
 
@@ -35,6 +34,7 @@ function calcExpenses(){
     expenses.forEach(function(expense){
         expensesSum+=expense.amount;
     });
+    $('#secondReport #figure2').text(expensesSum);
 }
 
 //Calculate Balance
@@ -51,3 +51,22 @@ function calcBalance(){
     balance = parseInt(budgetAmount) - expensesSum;
     $('#thirdReport #figure3').text(balance);
 }
+
+//Edit Expenses
+$('.edit').click(function(){
+    $(this).parent()
+});
+
+
+//Delete Expenses
+$('tbody').on('click','.delete', function(){
+    expensesSum = 0;
+     for(var i = 0; i < expenses.length; i++){
+        if($(this).parent().text().indexOf(expenses[i].title) !== -1){
+            expenses.splice(i, 1);
+            $(this).parent().remove();
+        }
+     } 
+    calcExpenses();
+    calcBalance();
+});
