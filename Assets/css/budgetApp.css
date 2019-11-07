@@ -64,3 +64,31 @@ table th{
 .fa, .money{
     font-size: 1.5em;
 }
+
+@media screen and (max-width: 750px){
+    #BudgetApp{
+        width: 70%;
+        grid-gap: 50px;
+    }
+    .budgetAppSections{
+        grid-template-columns:1fr;
+        grid-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #BudgetApp{
+        width: 96%;
+    }
+}
+
+@media screen and (min-width: 700px) and (min-height: 1000px) {
+    #BudgetApp{
+        width: 60%;
+        grid-gap: 80px;
+    }
+    .budgetAppSections{
+        grid-template-columns:1fr;
+        grid-gap: 80px;
+    }
+}
