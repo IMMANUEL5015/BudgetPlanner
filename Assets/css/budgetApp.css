@@ -78,7 +78,7 @@ table th{
 
 @media screen and (max-width: 450px){
     #BudgetApp{
-        width: 96%;
+        width: 100%;
     }
 }
 
