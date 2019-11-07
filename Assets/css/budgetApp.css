@@ -76,12 +76,6 @@ table th{
     }
 }
 
-@media screen and (max-width: 450px){
-    #BudgetApp{
-        width: 100%;
-    }
-}
-
 @media screen and (min-width: 700px) and (min-height: 1000px) {
     #BudgetApp{
         width: 60%;
@@ -90,5 +84,14 @@ table th{
     .budgetAppSections{
         grid-template-columns:1fr;
         grid-gap: 80px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #BudgetApp{
+        width: 100%;
+    }
+    h1{
+        font-size: 2.2em;
     }
 }
