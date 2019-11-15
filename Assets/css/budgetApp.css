@@ -89,9 +89,18 @@ table th{
 
 @media screen and (max-width: 450px){
     #BudgetApp{
+        width: 95%;
+    }
+    .Details{
         width: 100%;
     }
     h1{
         font-size: 2.2em;
+    }
+    h2{
+        font-size: 1.1em;
+    }
+    .fa, .money{
+        font-size: 1em;
     }
 }
